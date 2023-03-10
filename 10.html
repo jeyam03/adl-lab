@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Sign of Product</title>
+</head>
+
+<body>
+  <h1>Sign of Product</h1>
+  <form>
+    Num 1: <input type="number" id="num1"></text><br><br>
+    Num 2: <input type="number" id="num2"></text><br><br>
+    Num 3: <input type="number" id="num3"></text><br><br>
+    <button type="submit">Find Sign</button>
+  </form>
+  <script>
+    const form = document.querySelector('form');
+    const num1 = document.getElementById('num1');
+    const num2 = document.getElementById('num2');
+    const num3 = document.getElementById('num3');
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      let product = num1.value * num2.value * num3.value;
+      
+      if (product > 0) {
+        alert("The sign is +");
+      } else if (product < 0) {
+        alert("The sign is -");
+      } else {
+        alert("The sign is 0");
+      }
+    });
+  </script>
+</body>
+
+</html>
